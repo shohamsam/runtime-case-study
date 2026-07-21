@@ -80,69 +80,12 @@ a:hover { color: #0d3ea8; }
 
 </header>
 
-<!-- ═══ Problems → Fixes ═══ -->
-<section id="fixes" data-screen-label="Problems and fixes" style="padding: 112px 48px; border-bottom: 1px solid #e7e5e4; display: flex; flex-direction: column; align-items: center; gap: 64px;">
-  <div style="width: 100%; max-width: 1080px; display: flex; flex-direction: column; gap: 12px;">
-    <p style="margin: 0; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #6b7280;">Three problems, three fixes</p>
-    <h2 style="margin: 0; font-size: clamp(28px, 3.2vw, 36px); font-weight: 600; line-height: 1.2; color: #0d1117;">What was broken — and what changed</h2>
+<!-- ═══ Flow in motion ═══ -->
+<section id="fixes" data-screen-label="The flow in motion" style="padding: 88px 48px 104px; border-bottom: 1px solid #e7e5e4; display: flex; flex-direction: column; align-items: center; gap: 14px;">
+  <div style="width: 100%; max-width: 1080px; background: #ffffff; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 2px rgba(13,17,23,0.06), 0 10px 24px -8px rgba(13,17,23,0.14), 0 28px 56px -16px rgba(13,17,23,0.18);">
+    <video src="assets/install-flow.mp4" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" controls="{{ true }}" playsInline="{{ true }}" preload="auto" style="width: calc(100% + 4px); margin: -2px 0 -2px -2px; display: block;"></video>
   </div>
-
-  <div style="width: 100%; max-width: 1080px; display: flex; flex-direction: column; gap: 20px;">
-    <div style="max-width: 680px; display: flex; flex-direction: column; gap: 8px;">
-      <p style="margin: 0; font-size: 18px; font-weight: 600; color: #0d1117;">1 · The flow ended in a surprise</p>
-      <p style="margin: 0; font-size: 16px; line-height: 1.7;">Users reached what looked like the finish — then discovered more required steps. The fix: a stepper that shows the entire flow up front, so its length is never a surprise.</p>
-    </div>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px; align-items: start;">
-      <div style="display: flex; flex-direction: column; gap: 10px;">
-        <span style="align-self: flex-start; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; background: #fef2f2; color: #991b1b; border: 1px solid #fecaca;">Before</span>
-        <div onClick="{{ zoom }}" style="border-radius: 10px; overflow: hidden; width: 94%; box-shadow: 0 1px 2px rgba(13,17,23,0.05), 0 8px 20px -10px rgba(13,17,23,0.12); filter: grayscale(30%) saturate(0.9); cursor: zoom-in;"><img src="assets/post-installation-before.png" alt="Before: three more required steps appear after installation" style="width: 100%; display: block;"></div>
-        <p style="margin: 0; font-size: 13px; line-height: 1.5; color: #6b7280;">Installation "done" — then three more required steps appear, unannounced.</p>
-      </div>
-      <div style="display: flex; flex-direction: column; gap: 10px;">
-        <span style="align-self: flex-start; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; background: #f0fdf4; color: #14532d; border: 1px solid #bbf7d0;">After</span>
-        <div onClick="{{ zoom }}" style="border-radius: 10px; overflow: hidden; box-shadow: 0 0 0 1px rgba(21,128,61,0.14), 0 1px 2px rgba(13,17,23,0.06), 0 12px 28px -8px rgba(13,17,23,0.16), 0 32px 64px -16px rgba(13,17,23,0.2); cursor: zoom-in;"><img src="assets/success-stepper-v2.png" alt="After: success screen with the full stepper — post-install steps visible up front" style="width: 100%; display: block;"></div>
-        <p style="margin: 0; font-size: 13px; line-height: 1.5; color: #6b7280;">The stepper shows the whole journey from the start — including the three Configuration &amp; Management steps still ahead, so "done" is never a surprise.</p>
-      </div>
-    </div>
-  </div>
-
-  <div style="width: 100%; max-width: 1080px; display: flex; flex-direction: column; gap: 20px;">
-    <div style="max-width: 680px; display: flex; flex-direction: column; gap: 8px;">
-      <p style="margin: 0; font-size: 18px; font-weight: 600; color: #0d1117;">2 · Setup and execution were one blob</p>
-      <p style="margin: 0; font-size: 16px; line-height: 1.7;">Form fields, token generation, and a terminal command all lived in one view. The fix: Configure and Run became two distinct phases with a clear handoff between them.</p>
-    </div>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px; align-items: start;">
-      <div style="display: flex; flex-direction: column; gap: 10px;">
-        <span style="align-self: flex-start; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; background: #fef2f2; color: #991b1b; border: 1px solid #fecaca;">Before</span>
-        <div onClick="{{ zoom }}" style="border-radius: 10px; overflow: hidden; width: 94%; box-shadow: 0 1px 2px rgba(13,17,23,0.05), 0 8px 20px -10px rgba(13,17,23,0.12); filter: grayscale(30%) saturate(0.9); cursor: zoom-in;"><img src="assets/crop/config-merged-before.png" alt="Before: configuration and terminal command merged" style="width: 100%; display: block;"></div>
-        <p style="margin: 0; font-size: 13px; line-height: 1.5; color: #6b7280;">Config values and the install command collapsed into a single endless drawer.</p>
-      </div>
-      <div style="display: flex; flex-direction: column; gap: 10px;">
-        <span style="align-self: flex-start; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; background: #f0fdf4; color: #14532d; border: 1px solid #bbf7d0;">After</span>
-        <div onClick="{{ zoom }}" style="border-radius: 10px; overflow: hidden; box-shadow: 0 0 0 1px rgba(21,128,61,0.14), 0 1px 2px rgba(13,17,23,0.06), 0 12px 28px -8px rgba(13,17,23,0.16), 0 32px 64px -16px rgba(13,17,23,0.2); cursor: zoom-in;"><img src="assets/Run Runtime Installation.png" alt="After: Run is its own phase" style="width: 100%; display: block;"></div>
-        <p style="margin: 0; font-size: 13px; line-height: 1.5; color: #6b7280;">Configure in the UI, then Run in the terminal — two phases, one job each.</p>
-      </div>
-    </div>
-  </div>
-
-  <div style="width: 100%; max-width: 1080px; display: flex; flex-direction: column; gap: 20px;">
-    <div style="max-width: 680px; display: flex; flex-direction: column; gap: 8px;">
-      <p style="margin: 0; font-size: 18px; font-weight: 600; color: #0d1117;">3 · Silence after leaving the product</p>
-      <p style="margin: 0; font-size: 16px; line-height: 1.7;">After running the Helm command, users saw only a sparse table of runtime data — no view into the installation itself. The fix: Codefresh detects the command starting and opens a live window into what's happening behind the scenes.</p>
-    </div>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px; align-items: start;">
-      <div style="display: flex; flex-direction: column; gap: 10px;">
-        <span style="align-self: flex-start; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; background: #fef2f2; color: #991b1b; border: 1px solid #fecaca;">Before</span>
-        <div onClick="{{ zoom }}" style="border-radius: 10px; overflow: hidden; width: 94%; box-shadow: 0 1px 2px rgba(13,17,23,0.05), 0 8px 20px -10px rgba(13,17,23,0.12); filter: grayscale(30%) saturate(0.9); cursor: zoom-in;"><img src="assets/silence-before.png" alt="Before: no feedback after running the command" style="width: 100%; display: block;"></div>
-        <p style="margin: 0; font-size: 13px; line-height: 1.5; color: #6b7280;">A table with initial runtime data - but nothing about what's actually happening.<br></p>
-      </div>
-      <div style="display: flex; flex-direction: column; gap: 10px;">
-        <span style="align-self: flex-start; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; background: #f0fdf4; color: #14532d; border: 1px solid #bbf7d0;">After</span>
-        <div onClick="{{ zoom }}" style="border-radius: 10px; overflow: hidden; box-shadow: 0 0 0 1px rgba(21,128,61,0.14), 0 1px 2px rgba(13,17,23,0.06), 0 12px 28px -8px rgba(13,17,23,0.16), 0 32px 64px -16px rgba(13,17,23,0.2); cursor: zoom-in;"><img src="assets/Installing process.png" alt="After: live installing state" style="width: 100%; display: block;"></div>
-        <p style="margin: 0; font-size: 13px; line-height: 1.5; color: #6b7280;">The moment Helm starts, the page advances itself — live progress, no refresh.</p>
-      </div>
-    </div>
-  </div>
+  <p style="margin: 0; font-size: 13px; line-height: 1.5; color: #6b7280; text-align: center; max-width: 680px;">The handoffs in motion: the user leaves the UI for GitHub and the terminal — and Codefresh picks them back up the moment they return. Scrub or skip to any step.</p>
 </section>
 
 <!-- ═══ Context ═══ -->
@@ -152,9 +95,8 @@ a:hover { color: #0d3ea8; }
     <h2 style="margin: 0; font-size: clamp(28px, 3.2vw, 36px); font-weight: 600; line-height: 1.2; color: #0d1117;">Why a self-service installation mattered</h2>
   </div>
   <div style="width: 100%; max-width: 680px; display: flex; flex-direction: column; gap: 22px;">
-    <p style="margin: 0; font-size: 17px; line-height: 1.75;">Codefresh, now part of Octopus Deploy, had historically relied on a sales-led, enterprise motion — where implementation engineers guided new customers through the Runtime setup. As the company shifted toward a product-led growth (PLG) model, self-service installation became critical: <strong style="color: #0d1117; font-weight: 600;">a customer who couldn't install the Runtime on their own was a customer who never activated.</strong></p>
-    <p style="margin: 0; background: #f0f4ff; border-left: 3px solid #1a56db; padding: 20px 24px; font-size: 16px; line-height: 1.65; color: #3d4550;"><strong style="color: #0d1117; font-weight: 600;">The Runtime is the gateway.</strong> Without a working GitOps Runtime installed on a customer's Kubernetes cluster, Codefresh can't connect to their infrastructure. Every failed or abandoned installation is a direct hit to activation — and to revenue.</p>
-    <p style="margin: 0; font-size: 17px; line-height: 1.75;">The existing flow had been designed for a world where someone was always on hand to help. When that assumption changed, the friction became a conversion problem.</p>
+    <p style="margin: 0; font-size: 17px; line-height: 1.75;">The goal was to transition Codefresh from a sales-led motion to product-led growth. <strong style="color: #0d1117; font-weight: 600;">The primary blocker to value: successfully installing the GitOps Runtime.</strong></p>
+    <p style="margin: 0; font-size: 17px; line-height: 1.75;">Without a Runtime on the customer's Kubernetes cluster, Codefresh can't connect to their infrastructure — every failed installation is a customer who never activates.</p>
     <div style="height: 1px; background: #e7e5e4; margin: 16px 0;"></div>
     <div style="display: grid; grid-template-columns: 160px 1fr; gap: 12px; padding: 14px 0; border-bottom: 1px solid #e7e5e4; font-size: 15px;"><span style="color: #6b7280;">My role</span><span style="color: #0d1117; font-weight: 500;">Senior Product Designer (end-to-end)</span></div>
     <div style="display: grid; grid-template-columns: 160px 1fr; gap: 12px; padding: 14px 0; border-bottom: 1px solid #e7e5e4; font-size: 15px; margin-top: -22px;"><span style="color: #6b7280;">Collaborator</span><span style="color: #0d1117; font-weight: 500;">Oleg Turbovsky — Lead Front End Engineer</span></div>
@@ -194,10 +136,10 @@ a:hover { color: #0d3ea8; }
 </section>
 
 <!-- ═══ Problems ═══ -->
-<section id="problems" data-screen-label="Problems" style="padding: 112px 48px; display: flex; flex-direction: column; align-items: center; gap: 24px;">
+<section id="problems" data-screen-label="Problems" style="padding: 112px 48px; display: flex; flex-direction: column; align-items: center; gap: 72px;">
   <div style="width: 100%; max-width: 680px; display: flex; flex-direction: column; gap: 12px;">
-    <p style="margin: 0; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #6b7280;">What I found</p>
-    <h2 style="margin: 0; font-size: clamp(28px, 3.2vw, 36px); font-weight: 600; line-height: 1.2; color: #0d1117;">Three problems in the existing flow</h2>
+    <p style="margin: 0; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #6b7280;">Three problems, three fixes</p>
+    <h2 style="margin: 0; font-size: clamp(28px, 3.2vw, 36px); font-weight: 600; line-height: 1.2; color: #0d1117;">What was broken — and what changed</h2>
   </div>
 
   <div style="width: 100%; max-width: 1080px; margin-top: 24px; display: none; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 20px; align-items: start;">
@@ -227,26 +169,109 @@ a:hover { color: #0d3ea8; }
     </div>
   </div>
 
-  <div style="width: 100%; max-width: 680px; margin-top: 32px; display: flex; flex-direction: column;">
-    <div style="padding: 36px 0; border-bottom: 1px solid #e7e5e4; display: flex; gap: 32px; align-items: flex-start;">
-      <p style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-size: 56px; line-height: 1; color: #d6d3d1; flex-shrink: 0; width: 52px;">1</p>
+  <div style="width: 100%; max-width: 1080px; display: flex; flex-direction: column; gap: 20px;">
+    <div style="max-width: 680px; display: flex; flex-direction: column; gap: 8px;">
+      <p style="margin: 0; font-size: 18px; font-weight: 600; color: #0d1117;">1 · No sense of progress — or end</p>
+      <p style="margin: 0; font-size: 16px; line-height: 1.7;">Users reached what appeared to be the finish line — only to find more steps waiting. The flow had no visible structure: no step count, no progress bar, no defined end. It felt open-ended, which made users anxious and likely to drop off. <strong style="color: #0d1117; font-weight: 600;">The fix: a stepper that shows the entire flow up front, so its length is never a surprise.</strong></p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px; align-items: start;">
       <div style="display: flex; flex-direction: column; gap: 10px;">
-        <p style="margin: 0; font-size: 18px; font-weight: 600; color: #0d1117;">No sense of progress — or end</p>
-        <p style="margin: 0; font-size: 16px; line-height: 1.7;">Users reached what appeared to be the finish line — only to find more steps waiting. The flow had no visible structure: no step count, no progress bar, no indication that there was a defined end. It felt open-ended, which made users anxious and likely to drop off.</p>
+        <span style="align-self: flex-start; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; background: #fef2f2; color: #991b1b; border: 1px solid #fecaca;">Before</span>
+        <div onClick="{{ zoom }}" style="border-radius: 10px; overflow: hidden; width: 94%; box-shadow: 0 1px 2px rgba(13,17,23,0.05), 0 8px 20px -10px rgba(13,17,23,0.12); filter: grayscale(30%) saturate(0.9); cursor: zoom-in;"><img src="assets/post-installation-before.png" alt="Before: three more required steps appear after installation" style="width: 100%; display: block;"></div>
+        <p style="margin: 0; font-size: 13px; line-height: 1.5; color: #6b7280;">Installation "done" — then three more required steps appear, unannounced.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <span style="align-self: flex-start; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; background: #f0fdf4; color: #14532d; border: 1px solid #bbf7d0;">After</span>
+        <div onClick="{{ zoom }}" style="border-radius: 10px; overflow: hidden; box-shadow: 0 0 0 1px rgba(21,128,61,0.14), 0 1px 2px rgba(13,17,23,0.06), 0 12px 28px -8px rgba(13,17,23,0.16), 0 32px 64px -16px rgba(13,17,23,0.2); cursor: zoom-in;"><img src="assets/success-stepper-v2.png" alt="After: success screen with the full stepper — post-install steps visible up front" style="width: 100%; display: block;"></div>
+        <p style="margin: 0; font-size: 13px; line-height: 1.5; color: #6b7280;">The stepper shows the whole journey from the start — including the three Configuration &amp; Management steps still ahead, so "done" is never a surprise.</p>
       </div>
     </div>
-    <div style="padding: 36px 0; border-bottom: 1px solid #e7e5e4; display: flex; gap: 32px; align-items: flex-start;">
-      <p style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-size: 56px; line-height: 1; color: #d6d3d1; flex-shrink: 0; width: 52px;">2</p>
+  </div>
+
+  <div style="width: 100%; max-width: 1080px; display: flex; flex-direction: column; gap: 20px;">
+    <div style="max-width: 680px; display: flex; flex-direction: column; gap: 8px;">
+      <p style="margin: 0; font-size: 18px; font-weight: 600; color: #0d1117;">2 · Setup and execution were one blob</p>
+      <p style="margin: 0; font-size: 16px; line-height: 1.7;">Form fields, token generation, and a terminal command all lived in one endless view — no sequence, no sense of progress. Users couldn't tell what to do first, how much was left, or where work in the UI ended and work in the terminal began, so many stalled or ran the command with incomplete config. The fix: Configure and Run became two distinct phases with a clear handoff between them — one job each.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px; align-items: start;">
       <div style="display: flex; flex-direction: column; gap: 10px;">
-        <p style="margin: 0; font-size: 18px; font-weight: 600; color: #0d1117;">Configuration and execution were merged</p>
-        <p style="margin: 0; font-size: 16px; line-height: 1.7;">Users filled in values, generated a token, and ran a terminal command — all within the same step. Two fundamentally different activities (UI-based setup vs. terminal-based execution) were collapsed into one view, with no clear signal of when installation had actually begun.</p>
+        <span style="align-self: flex-start; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; background: #fef2f2; color: #991b1b; border: 1px solid #fecaca;">Before</span>
+        <div onClick="{{ zoom }}" style="border-radius: 10px; overflow: hidden; width: 94%; box-shadow: 0 1px 2px rgba(13,17,23,0.05), 0 8px 20px -10px rgba(13,17,23,0.12); filter: grayscale(30%) saturate(0.9); cursor: zoom-in;"><img src="assets/crop/config-merged-before.png" alt="Before: configuration and terminal command merged" style="width: 100%; display: block;"></div>
+        <p style="margin: 0; font-size: 13px; line-height: 1.5; color: #6b7280;">Everything at once: config, tokens, and the install command in one drawer — information overload with no clear starting point.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <span style="align-self: flex-start; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; background: #f0fdf4; color: #14532d; border: 1px solid #bbf7d0;">After</span>
+        <div onClick="{{ zoom }}" style="border-radius: 10px; overflow: hidden; box-shadow: 0 0 0 1px rgba(21,128,61,0.14), 0 1px 2px rgba(13,17,23,0.06), 0 12px 28px -8px rgba(13,17,23,0.16), 0 32px 64px -16px rgba(13,17,23,0.2); cursor: zoom-in;"><img src="assets/Run Runtime Installation.png" alt="After: Run is its own phase" style="width: 100%; display: block;"></div>
+        <p style="margin: 0; font-size: 13px; line-height: 1.5; color: #6b7280;">Configure in the UI, then Run in the terminal — two phases, one job each.</p>
       </div>
     </div>
-    <div style="padding: 36px 0; display: flex; gap: 32px; align-items: flex-start;">
-      <p style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-size: 56px; line-height: 1; color: #d6d3d1; flex-shrink: 0; width: 52px;">3</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 56px; align-items: start;">
+      <div style="display: flex; flex-direction: column; gap: 44px;">
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <span style="align-self: flex-start; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; background: #fef2f2; color: #991b1b; border: 1px solid #fecaca;">Before · step by step</span>
+          <p style="margin: 0; font-size: 13px; line-height: 1.5; color: #6b7280;">The old flow, annotated with what users actually said and felt at each step.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <div onClick="{{ zoom }}" style="cursor: zoom-in; border-radius: 8px; overflow: hidden; width: 94%; box-shadow: 0 1px 2px rgba(13,17,23,0.05), 0 6px 16px -8px rgba(13,17,23,0.12); filter: grayscale(30%) saturate(0.9);"><img src="assets/walkthrough/old-1-api-key.png" alt="Old step 1: Generate a Codefresh API Key" style="width: 100%; display: block;"></div>
+          <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #3f3f46; font-style: italic;">"Okay, I generated — where do I see it?"</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <div onClick="{{ zoom }}" style="cursor: zoom-in; border-radius: 8px; overflow: hidden; width: 94%; box-shadow: 0 1px 2px rgba(13,17,23,0.05), 0 6px 16px -8px rgba(13,17,23,0.12); filter: grayscale(30%) saturate(0.9);"><img src="assets/walkthrough/old-2-values.png" alt="Old step 2: Enter the runtime values with a Customize checkbox" style="width: 100%; display: block;"></div>
+          <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #3f3f46; font-style: italic;">"Do I need to customize the runtime values? I check the box and suddenly there's more to fill in — an annoying surprise."</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <div onClick="{{ zoom }}" style="cursor: zoom-in; border-radius: 8px; overflow: hidden; width: 94%; box-shadow: 0 1px 2px rgba(13,17,23,0.05), 0 6px 16px -8px rgba(13,17,23,0.12); filter: grayscale(30%) saturate(0.9);"><img src="assets/walkthrough/old-3-repo.png" alt="Old step 3: Add the helm chart repository command" style="width: 100%; display: block;"></div>
+          <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #3f3f46; font-style: italic;">"Where do I add this? I see a copy button — where am I supposed to paste it?"</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <div onClick="{{ zoom }}" style="cursor: zoom-in; border-radius: 8px; overflow: hidden; width: 94%; box-shadow: 0 1px 2px rgba(13,17,23,0.05), 0 6px 16px -8px rgba(13,17,23,0.12); filter: grayscale(30%) saturate(0.9);"><img src="assets/walkthrough/old-4-install.png" alt="Old step 4: Install the runtime helm chart — dense command with placeholders" style="width: 100%; display: block;"></div>
+          <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #3f3f46; font-style: italic;">"Aha! This is the most important part. Finally." — and it's a wall of placeholders the user has to edit by hand.</p>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 44px;">
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <span style="align-self: flex-start; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; background: #f0fdf4; color: #14532d; border: 1px solid #bbf7d0;">After · step by step</span>
+          <p style="margin: 0; font-size: 13px; line-height: 1.5; color: #6b7280;">The redesigned flow, annotated with the reasoning behind each decision.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <div onClick="{{ zoom }}" style="cursor: zoom-in; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 2px rgba(13,17,23,0.06), 0 8px 20px -8px rgba(13,17,23,0.14);"><img src="assets/walkthrough/new-1-instructions.png" alt="New flow: intro instructions explaining that these values generate the Helm command in the next step" style="width: 100%; display: block;"></div>
+          <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #3f3f46;">Instructions up front set the contract: what you enter here will generate the Helm install command in the next step.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <div onClick="{{ zoom }}" style="cursor: zoom-in; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 2px rgba(13,17,23,0.06), 0 8px 20px -8px rgba(13,17,23,0.14);"><img src="assets/walkthrough/new-2-values.png" alt="New step 1: Enter Runtime Values — pre-populated name and namespace" style="width: 100%; display: block;"></div>
+          <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #3f3f46;">Fields come pre-populated with sensible defaults but stay visible and editable — no checkbox surprise.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <div onClick="{{ zoom }}" style="cursor: zoom-in; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 2px rgba(13,17,23,0.06), 0 8px 20px -8px rgba(13,17,23,0.14);"><img src="assets/walkthrough/new-3-api-key.png" alt="New step 2: Generate Codefresh API Key with Generate and Skip actions" style="width: 100%; display: block;"></div>
+          <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #3f3f46;">The flow only advances once the API key is generated — the key lands in the command automatically, so there's nothing to lose track of.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <div onClick="{{ zoom }}" style="cursor: zoom-in; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 2px rgba(13,17,23,0.06), 0 8px 20px -8px rgba(13,17,23,0.14);"><img src="assets/walkthrough/new-4-instructions.png" alt="New flow: instructions explaining the command includes the values from the previous step" style="width: 100%; display: block;"></div>
+          <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #3f3f46;">Before the command, a plain explanation: it already includes the name, namespace, and API key you provided.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <div onClick="{{ zoom }}" style="cursor: zoom-in; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 2px rgba(13,17,23,0.06), 0 8px 20px -8px rgba(13,17,23,0.14);"><img src="assets/walkthrough/new-5-command.png" alt="New flow: Run Install Runtime Command — readable Helm command with a clear Copy button" style="width: 100%; display: block;"></div>
+          <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #3f3f46;">The Helm command is formatted for readability with one big call to action. Once it runs, Codefresh detects it and advances automatically.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="width: 100%; max-width: 1080px; display: flex; flex-direction: column; gap: 20px;">
+    <div style="max-width: 680px; display: flex; flex-direction: column; gap: 8px;">
+      <p style="margin: 0; font-size: 18px; font-weight: 600; color: #0d1117;">3 · Silence after leaving the product</p>
+      <p style="margin: 0; font-size: 16px; line-height: 1.7;">After running the Helm command in their terminal, users returned to Codefresh to find nothing had changed — no progress indicator, no confirmation the command had been received. That silence eroded trust in a moment when trust was everything. <strong style="color: #0d1117; font-weight: 600;">The fix: Codefresh detects the command starting and opens a live window into what's happening behind the scenes.</strong></p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px; align-items: start;">
       <div style="display: flex; flex-direction: column; gap: 10px;">
-        <p style="margin: 0; font-size: 18px; font-weight: 600; color: #0d1117;">Silence after leaving the product</p>
-        <p style="margin: 0; font-size: 16px; line-height: 1.7;">After running the Helm command in their terminal, users returned to Codefresh to find... nothing had changed. No progress indicator, no confirmation that the command had been received, no feedback. That silence eroded trust in a moment when trust was everything.</p>
+        <span style="align-self: flex-start; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; background: #fef2f2; color: #991b1b; border: 1px solid #fecaca;">Before</span>
+        <div onClick="{{ zoom }}" style="border-radius: 10px; overflow: hidden; width: 94%; box-shadow: 0 1px 2px rgba(13,17,23,0.05), 0 8px 20px -10px rgba(13,17,23,0.12); filter: grayscale(30%) saturate(0.9); cursor: zoom-in;"><img src="assets/silence-before.png" alt="Before: no feedback after running the command" style="width: 100%; display: block;"></div>
+        <p style="margin: 0; font-size: 13px; line-height: 1.5; color: #6b7280;">A table with initial runtime data - but nothing about what's actually happening.<br></p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <span style="align-self: flex-start; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; background: #f0fdf4; color: #14532d; border: 1px solid #bbf7d0;">After</span>
+        <div onClick="{{ zoom }}" style="border-radius: 10px; overflow: hidden; box-shadow: 0 0 0 1px rgba(21,128,61,0.14), 0 1px 2px rgba(13,17,23,0.06), 0 12px 28px -8px rgba(13,17,23,0.16), 0 32px 64px -16px rgba(13,17,23,0.2); cursor: zoom-in;"><img src="assets/Installing process.png" alt="After: live installing state" style="width: 100%; display: block;"></div>
+        <p style="margin: 0; font-size: 13px; line-height: 1.5; color: #6b7280;">The moment Helm starts, the page advances itself — live progress, no refresh.</p>
       </div>
     </div>
   </div>
@@ -286,10 +311,6 @@ a:hover { color: #0d3ea8; }
   <blockquote style="width: 100%; max-width: 680px; margin: 24px 0 8px; font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: clamp(24px, 2.8vw, 32px); line-height: 1.4; color: #0d1117; padding: 36px 0; border-top: 2px solid #0d1117; border-bottom: 1px solid #d6d3d1;">"When Helm starts running, Codefresh knows — and the page moves with you."</blockquote>
   <div style="width: 100%; max-width: 1080px; margin-top: 16px; display: flex; flex-direction: column; gap: 10px;">
     <div style="background: #ffffff; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 2px rgba(13,17,23,0.06), 0 10px 24px -8px rgba(13,17,23,0.14), 0 28px 56px -16px rgba(13,17,23,0.18);">
-      <video src="assets/install-flow.mp4" controls="{{ true }}" playsInline="{{ true }}" preload="metadata" style="width: calc(100% + 4px); margin: -2px 0 -2px -2px; display: block;"></video>
-    </div>
-    <p style="margin: 0; font-size: 13px; line-height: 1.5; color: #6b7280; text-align: center;">The handoffs in motion: the user leaves the UI for GitHub and the terminal — and Codefresh picks them back up the moment they return. Scrub or skip to any step.</p>
-    <div style="background: #ffffff; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 2px rgba(13,17,23,0.06), 0 10px 24px -8px rgba(13,17,23,0.14), 0 28px 56px -16px rgba(13,17,23,0.18); margin-top: 24px;">
       <video src="assets/token-deeplink.mp4" controls="{{ true }}" playsInline="{{ true }}" preload="metadata" style="width: calc(100% + 4px); margin: -2px 0 -2px -2px; display: block;"></video>
     </div>
     <p style="margin: 0; font-size: 13px; line-height: 1.5; color: #6b7280; text-align: center;">The Git credentials handoff: the deep link drops the user exactly where they need to be in GitHub, with the token settings pre-selected — generate, copy, and return.</p>
@@ -385,7 +406,7 @@ a:hover { color: #0d3ea8; }
 </section>
 
 <!-- ═══ Results ═══ -->
-<section id="results" data-screen-label="Results" style="padding: 112px 48px; display: flex; flex-direction: column; align-items: center; gap: 24px;">
+<section id="results" data-screen-label="Results" style="background: #f2f8f3; border-top: 1px solid #dcebe0; border-bottom: 1px solid #dcebe0; padding: 120px 48px; display: flex; flex-direction: column; align-items: center; gap: 24px;">
   <div style="width: 100%; max-width: 680px; display: flex; flex-direction: column; gap: 12px;">
     <p style="margin: 0; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #6b7280;">Impact</p>
     <h2 style="margin: 0; font-size: clamp(28px, 3.2vw, 36px); font-weight: 600; line-height: 1.2; color: #0d1117;">Post-release results</h2>
@@ -394,18 +415,19 @@ a:hover { color: #0d3ea8; }
     <p style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-size: clamp(72px, 8vw, 96px); line-height: 1; color: #15803d; flex-shrink: 0;">+90%</p>
     <div style="flex: 1; min-width: 300px; padding-top: 8px; display: flex; flex-direction: column; gap: 10px;">
       <p style="margin: 0; font-size: 20px; font-weight: 600; color: #0d1117;">Increase in GitOps Runtime installations</p>
-      <p style="margin: 0; font-size: 16px; line-height: 1.7;">After shipping <strong style="color: #0d1117; font-weight: 600;">Bring Your Own Argo</strong> — a feature allowing customers to connect an existing Argo CD instance instead of installing a new one — Runtime installations increased by 90%. Removing that blocker for teams with an established GitOps setup had a direct, measurable impact on activation.</p>
-      <p style="margin: 0; font-size: 16px; line-height: 1.7;">This wasn't a metric I chased upfront — it came from listening after launch. The empty state improvements, phase structure, and BYOA support were all shaped by real behaviour observed post-release, not assumptions made upfront.</p>
+      <p style="margin: 0; font-size: 16px; line-height: 1.7;">After shipping the redesigned Runtime flow, installations increased by 90%. The gain came from the combined work: a clearer UX, better error handling, removing unnecessary steps, and eliminating technical roadblocks — chief among them the requirement to install our Argo CD fork, which <strong style="color: #0d1117; font-weight: 600;">Bring Your Own Argo</strong> removed for teams with an established GitOps setup.</p>
+      <p style="margin: 0; font-size: 16px; line-height: 1.7;">No single change explains the number — it was the accumulation of removed friction across the whole flow.</p>
+      <p style="margin: 0; font-size: 16px; line-height: 1.7;">Measurement bookended the project: <strong style="color: #0d1117; font-weight: 600;">the same analytics that exposed drop-off before design became the baseline for ongoing post-launch analysis</strong> — and improvements like BYOA came directly out of that loop, not the original spec.</p>
     </div>
   </div>
   <div style="width: 100%; max-width: 1080px; margin-top: 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px;">
     <div style="display: flex; flex-direction: column; gap: 10px;">
       <p style="margin: 0; font-size: 13px; font-weight: 500; color: #6b7280;">Before Bring Your Own Argo</p>
-      <div onClick="{{ zoom }}" style="background: #ffffff; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 2px rgba(13,17,23,0.06), 0 10px 24px -8px rgba(13,17,23,0.14), 0 28px 56px -16px rgba(13,17,23,0.18); cursor: zoom-in;"><img src="assets/Frame 1000005489.png" alt="Adoption funnel before BYOA" style="width: 100%; display: block;"></div>
+      <div onClick="{{ zoom }}" style="background: #ffffff; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 2px rgba(13,17,23,0.06), 0 10px 24px -8px rgba(13,17,23,0.14), 0 28px 56px -16px rgba(13,17,23,0.18); cursor: zoom-in;"><img src="assets/funnel-before.png" alt="Adoption funnel before BYOA" style="width: 100%; display: block;"></div>
     </div>
     <div style="display: flex; flex-direction: column; gap: 10px;">
       <p style="margin: 0; font-size: 13px; font-weight: 500; color: #6b7280;">After Bring Your Own Argo</p>
-      <div onClick="{{ zoom }}" style="background: #ffffff; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 2px rgba(13,17,23,0.06), 0 10px 24px -8px rgba(13,17,23,0.14), 0 28px 56px -16px rgba(13,17,23,0.18); cursor: zoom-in;"><img src="assets/Frame 1000005490.png" alt="Adoption funnel after BYOA" style="width: 100%; display: block;"></div>
+      <div onClick="{{ zoom }}" style="background: #ffffff; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 2px rgba(13,17,23,0.06), 0 10px 24px -8px rgba(13,17,23,0.14), 0 28px 56px -16px rgba(13,17,23,0.18); cursor: zoom-in;"><img src="assets/funnel-after.png" alt="Adoption funnel after BYOA" style="width: 100%; display: block;"></div>
     </div>
   </div>
 </section>
